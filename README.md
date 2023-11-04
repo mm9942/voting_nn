@@ -33,7 +33,7 @@ Follow the on-screen prompts to input voting counts and receive predictions.
 
 ## Dataset
 
-The dataset consists of pairs of voting counts with labels indicating the outcome: 0 for the first choice winning, 1 for the second choice winning, and 2 for a draw. Ensure the dataset is formatted correctly and loaded into the program.
+The dataset consists of pairs of voting counts with labels indicating the outcome: 0 for the first choice winning, 1 for a draw, and 2 for the second choice winning.
 
 ## Training
 
