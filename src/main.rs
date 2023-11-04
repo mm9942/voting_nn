@@ -28,7 +28,7 @@ impl MultiLevelPerceptron {
     fn new(vs: VarBuilder) -> Result<Self, anyhow::Error> {
         let ln1 = candle_nn::linear(VOTE_DIM, LAYER1_OUT_SIZE, vs.pp("ln1"))?;
         let ln2 = candle_nn::linear(LAYER1_OUT_SIZE, LAYER2_OUT_SIZE, vs.pp("ln2"))?;
-        let ln3 = candle_nn::linear(LAYER2_OUT_SIZE, 3, vs.pp("ln3"))?;  // Changed RESULTS + 1 to 3
+        let ln3 = candle_nn::linear(LAYER2_OUT_SIZE, 3, vs.pp("ln3"))?;
         Ok(Self { ln1, ln2, ln3 })
     }
 
