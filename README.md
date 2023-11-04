@@ -17,8 +17,8 @@ This repository contains a Rust implementation of a simple Multi-Level Perceptro
 Ensure you have Rust and Candle installed on your machine. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/Multi-Level-Perceptron-Voting-Predictor.git
-cd Multi-Level-Perceptron-Voting-Predictor
+git clone https://github.com/mm9942/voting_nn.git
+cd voting_nn
 ```
 
 ## Usage
