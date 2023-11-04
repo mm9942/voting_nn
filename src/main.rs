@@ -1,6 +1,7 @@
 use candle_core::{Device, DType, Tensor, D, Module};
 use candle_nn::{Linear, VarBuilder, VarMap, ops, loss, Optimizer};
 use anyhow;
+use std::io::{Write, stdin, stdout};
 
 const VOTE_DIM: usize = 3;
 const RESULTS: usize = 1;
@@ -175,9 +176,9 @@ pub fn main() -> anyhow::Result<()> {
 
     loop {
         println!("Enter two vote results separated by space (or 'q' to quit):");
-
+        let _ = stdout().flush();
         let mut input = String::new();
-        std::io::stdin().read_line(&mut input)?;
+        stdin().read_line(&mut input)?;
         input = input.trim().to_string();
 
         if input.to_lowercase() == "exit" || input.to_lowercase() == "q" {
